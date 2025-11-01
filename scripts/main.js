@@ -184,17 +184,26 @@ function showAlert(message, type = 'info') {
         border-radius: 8px;
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         z-index: 1000;
-        animation: slideInRight 0.3s ease-out;
+        opacity: 0;
+        transform: translateX(100%);
+        transition: all 0.3s ease-out;
     `;
     
     // Add to page
     document.body.appendChild(alert);
     
+    // Trigger animation
+    setTimeout(() => {
+        alert.style.opacity = '1';
+        alert.style.transform = 'translateX(0)';
+    }, 10);
+    
     // Remove after 3 seconds
     setTimeout(() => {
-        alert.style.animation = 'slideOutRight 0.3s ease-out';
+        alert.style.opacity = '0';
+        alert.style.transform = 'translateX(100%)';
         setTimeout(() => {
-            document.body.removeChild(alert);
+            alert.remove();
         }, 300);
     }, 3000);
 }
