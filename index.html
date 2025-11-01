@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Frontend Foundations - Learning HTML, CSS, and JavaScript fundamentals">
+    <title>Frontend Foundations</title>
+    
+    <!-- Link to external CSS file -->
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+    <!-- 
+        HEADER SECTION
+        Contains the main navigation and branding
+        Position: sticky or fixed for persistent navigation
+    -->
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <div class="logo">
+                    <h1>Frontend Foundations</h1>
+                </div>
+                <ul class="nav-menu">
+                    <li class="nav-item"><a href="#home" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+                    <li class="nav-item"><a href="#projects" class="nav-link">Projects</a></li>
+                    <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+                <!-- Hamburger menu for mobile (toggle with JS) -->
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- 
+        HERO SECTION
+        Eye-catching intro section with headline and call-to-action
+        Common pattern: full viewport height with centered content
+    -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h2 class="hero-title">Build Your Frontend Skills</h2>
+            <p class="hero-subtitle">Master HTML, CSS, and JavaScript fundamentals without frameworks</p>
+            <button class="cta-button">Get Started</button>
+        </div>
+    </section>
+
+    <!-- 
+        MAIN CONTENT SECTION
+        Contains the primary content of the page
+        Use semantic HTML5 elements for better accessibility
+    -->
+    <main class="main-content">
+        <div class="container">
+            <!-- About Section -->
+            <section class="section" id="about">
+                <h2 class="section-title">About This Project</h2>
+                <p class="section-text">
+                    This is a starter template for practicing frontend fundamentals. 
+                    Learn core web technologies with clean, well-structured code.
+                </p>
+            </section>
+
+            <!-- Projects/Cards Section -->
+            <section class="section" id="projects">
+                <h2 class="section-title">Practice Areas</h2>
+                <div class="card-grid">
+                    <!-- Card 1 -->
+                    <article class="card">
+                        <div class="card-header">
+                            <h3 class="card-title">HTML Fundamentals</h3>
+                        </div>
+                        <div class="card-body">
+                            <p>Semantic markup, accessibility, and document structure.</p>
+                        </div>
+                    </article>
+
+                    <!-- Card 2 -->
+                    <article class="card">
+                        <div class="card-header">
+                            <h3 class="card-title">CSS Layouts</h3>
+                        </div>
+                        <div class="card-body">
+                            <p>Flexbox, Grid, responsive design, and media queries.</p>
+                        </div>
+                    </article>
+
+                    <!-- Card 3 -->
+                    <article class="card">
+                        <div class="card-header">
+                            <h3 class="card-title">JavaScript Basics</h3>
+                        </div>
+                        <div class="card-body">
+                            <p>DOM manipulation, events, and modern ES6+ syntax.</p>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <!-- Contact Section -->
+            <section class="section" id="contact">
+                <h2 class="section-title">Get in Touch</h2>
+                <form class="contact-form">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" placeholder="Your name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="your.email@example.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" placeholder="Your message" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-button">Send Message</button>
+                </form>
+            </section>
+        </div>
+    </main>
+
+    <!-- 
+        FOOTER SECTION
+        Contains copyright, links, and additional info
+        Typically at the bottom of every page
+    -->
+    <footer class="footer">
+        <div class="container">
+            <p class="footer-text">&copy; 2024 Frontend Foundations. Built with pure HTML, CSS, and JavaScript.</p>
+            <div class="footer-links">
+                <a href="#" class="footer-link">Privacy</a>
+                <a href="#" class="footer-link">Terms</a>
+                <a href="#" class="footer-link">GitHub</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Link to external JavaScript file - placed before closing body tag for better performance -->
+    <script src="scripts/main.js"></script>
+</body>
+</html>
